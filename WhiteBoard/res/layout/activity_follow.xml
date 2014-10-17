@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/icon_background" >
+
+    <!-- TitleBar -->
+
+    <RelativeLayout
+        android:id="@+id/backgroundFollow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_title_background" >
+
+        <TextView
+            android:id="@+id/followFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_follow_follow"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- View -->
+
+    <LinearLayout
+        android:id="@+id/twobuttonFollow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backgroundFollow"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <!-- 我关注的 -->
+
+        <FrameLayout
+            android:id="@+id/firstbuttonFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" >
+
+            <ImageButton
+                android:id="@+id/followingFollow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_button_of_follow_hov" />
+
+            <TextView
+                android:id="@+id/textfollowingFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/text_following_follow"
+                android:textColor="#444444"
+                android:textSize="18sp" />
+        </FrameLayout>
+
+        <!-- 关注我的 -->
+
+        <FrameLayout
+            android:id="@+id/secondbuttonFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" >
+
+            <ImageButton
+                android:id="@+id/followedFollow"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_button_of_follow_act" />
+
+            <TextView
+                android:id="@+id/textfollowedFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/text_followed_follow"
+                android:textColor="#444444"
+                android:textSize="18sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Navigation -->
+
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" 
+        android:background="@drawable/icon_title_background">
+
+        <ImageButton
+            android:id="@+id/buttonmapFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_title_background"
+            android:src="@drawable/style_navi_button_map" />
+
+        <ImageButton
+            android:id="@+id/buttonprofileFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_title_background"
+            android:src="@drawable/style_navi_button_profile"  />
+
+        <ImageButton
+            android:id="@+id/buttonfollowFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_title_background"
+            android:src="@drawable/navi_follow_current" />
+
+        <ImageButton
+            android:id="@+id/buttonsetFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_title_background"
+            android:src="@drawable/style_navi_button_settings" />
+    </LinearLayout>
+
+    <!-- 用户列表 -->
+
+    <ListView
+        android:id="@+id/list_view_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/navigation"
+        android:layout_below="@id/twobuttonFollow" >
+    </ListView>
+
+</RelativeLayout>

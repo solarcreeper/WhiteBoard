@@ -1,0 +1,266 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout1Publish"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2Publish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_title_background">
+
+        <ImageButton
+            android:id="@+id/backPublish"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/style_title_button_back" 
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/advancePublish"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/style_title_button_next"
+            android:background="@null" />
+
+        <TextView
+            android:id="@+id/titlePublish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/title_publish"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            tools:ignore="SpUsage" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3Publish"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relativeLayout4Publish"
+        android:layout_below="@+id/relativeLayout2Publish"
+        android:layout_marginBottom="40dp"
+        android:padding="8dp">
+        
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+        
+        <RelativeLayout 
+            android:id="@+id/message_layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+            
+            <ImageView 
+                android:id="@+id/message_layout_top_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/icon_message_top_left_publish"/>
+            
+            <ImageView 
+                android:id="@+id/message_layout_top_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_message_top_right_publish"/>
+            
+            <ImageView 
+                android:id="@+id/message_layout_top_mid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/message_layout_top_left"
+                android:layout_toLeftOf="@id/message_layout_top_right"
+                android:background="@drawable/icon_message_top_mid_publish"/>
+            
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/message_layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            
+            <ImageView 
+                android:id="@+id/message_layout_bottom_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/icon_message_bottom_left_publish"/>
+            
+            <ImageView 
+                android:id="@+id/message_layout_bottom_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_message_bottom_right_publish"/>
+            
+            <ImageView 
+                android:id="@+id/message_layout_bottom_mid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/message_layout_bottom_left"
+                android:layout_toLeftOf="@id/message_layout_bottom_right"
+                android:background="@drawable/icon_message_bottom_mid_publish"/>
+            
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/message_layout_mid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message_layout_top"
+            android:layout_above="@id/message_layout_bottom">
+            
+            <ImageView 
+                android:id="@+id/message_layout_mid_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/icon_message_mid_left_publish"/>
+           
+            <ImageView 
+                android:id="@+id/message_layout_mid_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_message_mid_right_publish"/>
+
+	        <TextView
+	            android:id="@+id/wordNumberPublish"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentBottom="true"
+	            android:layout_toRightOf="@id/message_layout_mid_left"
+	            android:layout_toLeftOf="@id/message_layout_mid_right"
+	            android:text="@string/word_number"
+	            android:textSize="14dp"
+	            android:textColor="#aaaaaa"
+	            android:textStyle="italic"
+	            android:background="#ffffff"
+	            android:gravity="right"
+	            tools:ignore="SpUsage" />
+	
+	        <EditText
+	            android:id="@+id/contentPublish"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_above="@+id/wordNumberPublish"
+	            android:layout_toRightOf="@id/message_layout_mid_left"
+	            android:layout_toLeftOf="@id/message_layout_mid_right"
+	            android:layout_alignParentTop="true"
+	            android:background="#fff"
+	            android:textSize="18sp"
+	            android:textColor="#444444"
+	            android:gravity="start"
+	            tools:ignore="TextFields" >
+	            
+	            <requestFocus />
+	        </EditText>
+	        
+			<!-- 测试用的ImageVIew -->
+	        <ImageView
+	            android:id="@+id/test"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/default_avatar"
+	            android:visibility="invisible" />
+        
+        </RelativeLayout>
+
+    </RelativeLayout>
+    
+    <!-- 当前位置tishi -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout1Publish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/relativeLayout4Publish"
+        android:layout_marginLeft="8dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/addressBackgroundTopPublish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_address_bacground_top_publish" />
+
+        <TextView
+            android:id="@+id/addressMidPublish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_address_bacground_mid_publish"
+            android:gravity="center_vertical"
+            android:text="@string/address_publish"
+            android:textColor="#aaaaaa"
+            android:textSize="14sp"
+            android:layout_marginLeft="-15dp" />
+
+        <ImageView
+            android:id="@+id/addressBackgroundBottomPublish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_address_bacground_bottom_publish" />
+        
+    </LinearLayout>
+
+    <!-- Tools Bar -->
+    
+    <RelativeLayout
+        android:id="@+id/relativeLayout4Publish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" 
+        android:background="@drawable/publish_tool_background">
+
+        <ImageButton
+            android:id="@+id/currentAddressPublish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/style_publish_tool_location"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/buttonFacePublish"
+            style="@style/AppBaseTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/style_publish_tool_emoji"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/buttonSoundPublish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/buttonFacePublish"
+            android:background="@drawable/style_publish_tool_voice" />
+
+        <ImageButton
+            android:id="@+id/buttonPicturePublish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/buttonSoundPublish"
+            android:background="@drawable/style_publish_tool_picture" />
+    </RelativeLayout>
+
+</RelativeLayout>

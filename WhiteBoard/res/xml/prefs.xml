@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <EditTextPreference android:defaultValue="true" android:key="first_use"/>
+        <EditTextPreference android:defaultValue="false" android:key="logged_in"/>
+        <EditTextPreference android:key="uid" android:defaultValue="0"/>
+        <EditTextPreference android:defaultValue="null" android:key="username"/>
+        <EditTextPreference android:key="identifier"/>
+        <EditTextPreference android:defaultValue=",1,2,3,4," android:key="default_category"/>
+        <EditTextPreference android:defaultValue="true" android:key="followable"/>
+        <EditTextPreference android:defaultValue="0" android:key="update_stamp"/>
+    </PreferenceScreen>

@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background" > <!--  背景图片  -->
+
+
+    <!-- TitleBar -->
+
+    <RelativeLayout
+        android:id="@+id/backgroundMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_title_background" > <!--  上方的背景图片  -->
+
+		<!--  搜索按钮  -->
+		
+        <ImageButton
+            android:id="@+id/searchMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/style_title_button_search" />
+        
+        <!--  刷新按钮  -->
+
+        <ImageButton
+            android:id="@+id/refreshMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/style_title_button_refresh" /> 
+            
+         <!--  标题  -->
+
+        <TextView
+            android:id="@+id/mapMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/title_map_map"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <!-- Main Content -->
+
+    <RelativeLayout
+        android:id="@+id/addboxAndMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigation"
+        android:layout_below="@id/backgroundMap" >
+
+        <com.baidu.mapapi.map.MapView 
+            android:id="@+id/mymap"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent" 
+			android:clickable="true" />
+
+    </RelativeLayout>
+    
+    <!-- Tools Layout -->
+    <RelativeLayout
+        android:id="@+id/toolsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/backgroundMap" 
+        android:layout_above="@+id/navigation">
+        
+        <RelativeLayout 
+            android:id="@+id/searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/icon_title_background"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:visibility="gone">
+            
+            <ImageView 
+                android:id="@+id/imageViewSearchLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/icon_search_box_left"/>
+            
+            <ImageView 
+                android:id="@+id/imageViewSearchRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_search_box_right"/>
+            
+            <EditText 
+                android:id="@+id/search_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imageViewSearchLeft"
+                android:layout_toLeftOf="@id/imageViewSearchRight"
+                android:background="@drawable/icon_search_box_middle"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="#444444"
+                android:textSize="18sp"/>
+            
+        </RelativeLayout>
+    
+    	<ImageButton
+            android:id="@+id/buttonaddMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/searchLayout"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:src="@drawable/style_button_map_new" />
+    	
+    	<ImageButton
+            android:id="@+id/buttonLocateMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@null"
+            android:src="@drawable/style_button_map_locate" />
+    	
+    </RelativeLayout>
+  
+
+    <!-- Navigation -->
+
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <!-- 地图 -->
+        
+        <ImageButton
+            android:id="@+id/buttonmapMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_title_background"
+            android:src="@drawable/navi_map_current" />
+            
+        <!-- 资料 -->
+        
+        <ImageButton
+            android:id="@+id/buttonprofileMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_title_background"
+            android:src="@drawable/style_navi_button_profile"  />
+        
+        <!-- 关注 -->
+        
+        <ImageButton
+            android:id="@+id/buttonfollowMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_title_background"
+            android:src="@drawable/style_navi_button_follow"  />
+        
+        <!-- 设置 -->
+
+        <ImageButton
+            android:id="@+id/buttonsetMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_title_background"
+            android:src="@drawable/style_navi_button_settings"  />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,278 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background" >
+
+    <!-- TitleBar -->
+
+    <RelativeLayout
+        android:id="@+id/backgroundProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_title_background" >
+
+        <TextView
+            android:id="@+id/profileProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_profile_profile"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/backProfile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/style_title_button_back"
+            android:background="@null" />
+
+        <ProgressBar
+            android:id="@+id/indicator"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!-- 展示View -->
+
+    <FrameLayout
+        android:id="@+id/allpictureProfile"
+        android:layout_width="match_parent"
+        android:layout_height="231dp"
+        android:layout_below="@id/backgroundProfile" >
+
+        <!-- Background -->
+
+        <ImageView
+            android:id="@+id/mybackgroundProfile"
+            android:layout_width="match_parent"
+            android:layout_height="177dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_mybackground" />
+
+        <!-- ***************我的头像部分图片和昵称区域*************** -->
+
+        <RelativeLayout
+            android:id="@+id/myproflieProfle"
+            android:layout_width="match_parent"
+            android:layout_height="231dp" >
+
+            <!-- Avatar -->
+
+            <RelativeLayout
+                android:id="@+id/userpictuerProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="128dp"
+                android:background="@drawable/avatar_background"
+                android:padding="8dp" >
+
+                <ImageView
+                    android:id="@+id/usertitleProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/default_avatar" />
+
+            </RelativeLayout>
+
+            <!-- 昵称 -->
+
+            <TextView
+                android:id="@+id/nameProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/userpictuerProfile"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/userpictuerProfile"
+                android:text="UserName"
+                android:textColor="#444444"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/followButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/icon_button_follow_off" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!-- 列表显示部分 -->
+
+    <LinearLayout
+        android:id="@+id/contentProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/allpictureProfile"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="8dp"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/button_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_list_button_top" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/button_favorite"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_navigation_next_item" />
+
+            <TextView
+                android:id="@+id/label_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/button_favorite"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="@string/profile_my_favorite"
+                android:textColor="#444444"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        
+        <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/icon_line_cutoff" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/button_published"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_list_button_middle" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/button_published"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_navigation_next_item" />
+
+            <TextView
+                android:id="@+id/label_published"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/button_published"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="@string/profile_my_published"
+                android:textColor="#444444"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        
+        <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/icon_line_cutoff" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="8dp"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/button_commented"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_list_button_bottom" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/button_commented"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_navigation_next_item" />
+
+            <TextView
+                android:id="@+id/label_commented"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/button_commented"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="@string/profile_my_commented"
+                android:textColor="#444444"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Navigation -->
+
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <ImageButton
+            android:id="@+id/buttonmapProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_title_background"
+            android:src="@drawable/style_navi_button_map" />
+
+        <ImageButton
+            android:id="@+id/buttonprofileProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_title_background"
+            android:src="@drawable/navi_profile_current"/>
+
+        <ImageButton
+            android:id="@+id/buttonfollowProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_title_background"
+            android:src="@drawable/style_navi_button_follow" />
+
+        <ImageButton
+            android:id="@+id/buttonsetProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_title_background"
+            android:src="@drawable/style_navi_button_settings" />
+    </LinearLayout>
+
+</RelativeLayout>

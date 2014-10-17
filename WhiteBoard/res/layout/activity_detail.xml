@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background"
+    tools:context=".DetailMessageActivity" >
+
+    <!-- TitleBar -->
+
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/icon_title_background" >
+
+        <!-- 返回按钮 -->
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/style_title_button_back" />
+
+        <!-- 标题纸条详情 -->
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/title_information"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            tools:ignore="SpUsage" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titlebar" 
+        android:layout_above="@+id/relativeLayout5Information">
+
+        <ListView
+            android:id="@+id/wholelist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5Information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+        
+        <RelativeLayout
+            android:id="@+id/comment_layout_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" 
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_background_mid_discuss"
+                android:orientation="horizontal"
+                android:padding="8dp" >
+
+                <!-- 头像 -->
+
+                <RelativeLayout
+                    android:id="@+id/layout_avatar_addcomment"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/avatar_background"
+                    android:gravity="center"
+                    android:padding="4dp" >
+
+                    <ImageView
+                        android:id="@+id/comment_list_avatar_addcomment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/default_avatar" />
+                </RelativeLayout>
+
+                <!-- 输入框 -->
+
+              	<EditText
+                    android:id="@+id/comment_list_content_addcomment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:imeOptions="actionSend"
+                    android:minLines="3"
+                    android:textColor="#7a7a7a"
+                    android:textSize="18sp" >
+                   
+ 
+                </EditText>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/comment_layout_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comment_layout_add"
+            android:background="@drawable/icon_menu_background_information" >
+
+            <!-- 收藏&取消收藏 -->
+
+            <ImageButton
+                android:id="@+id/buttonMuneCollectInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/icon_button_menu_collect_information" />
+            
+            <ImageButton
+                android:id="@+id/buttonSendComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/icon_button_menu_discuss_send" 
+                android:visibility="gone"/>
+            
+            <ProgressBar 
+	            android:id="@+id/indicator"
+	            android:layout_width="32dp"
+	            android:layout_height="32dp"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:visibility="gone"/>
+            
+            <!-- 展开评论&评论数 -->
+
+            <FrameLayout
+                android:id="@+id/frameLayout4Information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" >
+
+                <ImageButton
+                    android:id="@+id/buttonMuneDiscussInformation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_button_menu_discuss_information" />
+
+                <TextView
+                    android:id="@+id/discussNumberInformation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/discuss_number_information"
+                    android:textColor="#aaaaaa"
+                    android:textSize="12sp" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        
+    </RelativeLayout>
+
+</RelativeLayout>

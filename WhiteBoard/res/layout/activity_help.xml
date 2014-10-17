@@ -1,0 +1,245 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background"
+    tools:context=".HelpActivity" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2Help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_title_background" >
+
+        <ImageButton
+            android:id="@+id/backHelp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/style_title_button_back" />
+
+        <TextView
+            android:id="@+id/titleHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_help"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            tools:ignore="SpUsage" />
+    </RelativeLayout>
+    <!-- 纸 -->
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_below="@id/relativeLayout2Help">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1Help"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relativeLayout2Help"
+        android:padding="16dp"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:id="@+id/tableLayout1About"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TableRow>
+
+                <ImageView
+                    android:id="@+id/backgroundTopLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_about_background_top_left" />
+
+                <ImageView
+                    android:id="@+id/backgroundTopMid1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/icon_about_background_top_mid" />
+
+                <ImageView
+                    android:id="@+id/holeAbout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/icon_about_background_top" />
+
+                <ImageView
+                    android:id="@+id/backgroundTopMid2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/icon_about_background_top_mid" />
+
+                <ImageView
+                    android:id="@+id/holeAbout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/icon_about_background_top" />
+
+                <ImageView
+                    android:id="@+id/backgroundTopMid3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/icon_about_background_top_mid" />
+
+                <ImageView
+                    android:id="@+id/holeAbout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/icon_about_background_top" />
+
+                <ImageView
+                    android:id="@+id/backgroundTopMid4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/icon_about_background_top_mid" />
+
+                <ImageView
+                    android:id="@+id/backgroundTopRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_about_background_top_right" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- 文字内容 -->
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3Help"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/icon_about_background_mid"
+            android:paddingBottom="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="8dp" >
+
+            <!-- 什么是白板 -->
+
+            <TextView
+                android:id="@+id/firstQuestionHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/first_question_help"
+                android:textColor="#7a7a7a"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/firstAnswerHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstQuestionHelp"
+                android:layout_marginTop="8dp"
+                android:text="@string/first_answer_help"
+                android:textColor="#aaaaaa"
+                android:textSize="16sp" />
+            <!-- 什么是可见地点 -->
+
+            <TextView
+                android:id="@+id/secondQuestionHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstAnswerHelp"
+                android:layout_marginTop="16dp"
+                android:text="@string/second_question_help"
+                android:textColor="#7a7a7a"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/secondAnswerHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondQuestionHelp"
+                android:layout_marginTop="8dp"
+                android:text="@string/second_answer_help"
+                android:textColor="#aaaaaa"
+                android:textSize="16sp" />
+            <!-- 什么是扔出去 -->
+
+            <TextView
+                android:id="@+id/thirdQuestionHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondAnswerHelp"
+                android:layout_marginTop="16dp"
+                android:text="@string/third_question_help"
+                android:textColor="#7a7a7a"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/thirdAnswerHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thirdQuestionHelp"
+                android:layout_marginTop="8dp"
+                android:text="@string/third_answer_help"
+                android:textColor="#aaaaaa"
+                android:textSize="16sp" />
+            <!--  -->
+
+            <TextView
+                android:id="@+id/fourthQuestionHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thirdAnswerHelp"
+                android:layout_marginTop="16dp"
+                android:text="@string/fourth_question_help"
+                android:textColor="#7a7a7a"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/fourthAnswerHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fourthQuestionHelp"
+                android:layout_marginTop="8dp"
+                android:text="@string/fourth_answer_help"
+                android:textColor="#aaaaaa"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/message_layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/backgroundBottomLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/icon_about_background_bottom_left" />
+
+            <ImageView
+                android:id="@+id/backgroundBottomRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_about_background_bottom_right" />
+
+            <ImageView
+                android:id="@+id/message_layout_bottom_mid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/backgroundBottomRight"
+                android:layout_toRightOf="@id/backgroundBottomLeft"
+                android:background="@drawable/icon_about_background_bottom_mid" />
+        </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

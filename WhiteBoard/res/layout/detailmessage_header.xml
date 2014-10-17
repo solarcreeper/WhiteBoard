@@ -1,0 +1,382 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout1Information"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp"
+    tools:context=".InformationActivity" >
+
+    <RelativeLayout
+        android:id="@+id/message_layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/message_layout_top_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/icon_message_top_left_publish" />
+
+        <ImageView
+            android:id="@+id/message_layout_top_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/icon_message_top_right_publish" />
+
+        <ImageView
+            android:id="@+id/message_layout_top_mid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/message_layout_top_right"
+            android:layout_toRightOf="@id/message_layout_top_left"
+            android:background="@drawable/icon_message_top_mid_publish" />
+    </RelativeLayout>
+
+    <!-- 色带以上内容 -->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3Information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background_mid_information" >
+
+        <!-- 头像 -->
+
+        <RelativeLayout
+            android:id="@+id/layout_avatar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/avatar_background"
+            android:gravity="center"
+            android:padding="4dp" >
+
+            <ImageView
+                android:id="@+id/dm_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/default_avatar" />
+        </RelativeLayout>
+
+        <!-- 用户昵称 -->
+
+        <TextView
+            android:id="@+id/usernameInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/layout_avatar"
+            android:text="@string/username_information"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <!-- 投票 -->
+
+        <FrameLayout
+            android:id="@+id/frameLayout1Information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/frameLayout2Information"
+            android:layout_marginRight="8dp">
+
+            <!-- 有帮助的按钮 -->
+
+            <ImageButton
+                android:id="@+id/buttonMarkHelpful"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_button_helpful_nor_information"
+                android:src="@drawable/icon_button_helpful_nor_information" />
+
+            <!-- 好评数 -->
+
+            <TextView
+                android:id="@+id/helpfulNumberInformation"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/helpful_number_information"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                tools:ignore="SpUsage" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout2Information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp" >
+
+            <!-- 没有帮助的按钮 -->
+
+            <ImageButton
+                android:id="@+id/buttonMarkSpam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_button_helpful_nor_information"
+                android:src="@drawable/icon_button_helpful_nor_information" />
+            <!-- 垃圾数 -->
+
+            <TextView
+                android:id="@+id/unhelpfulNumberInformation"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/unhelpful_number_information"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                tools:ignore="SpUsage" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <!-- 分割色带 & 分类信息 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background_mid_information" >
+
+        <ImageView
+            android:id="@+id/colorInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_color_bule_discuss_information" />
+
+        <TextView
+            android:id="@+id/label_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="#fff"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="商业信息"
+            android:textColor="#aaaaaa"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4Information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background_mid_information"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp" >
+
+        <!-- 写纸条的地点 -->
+
+        <TextView
+            android:id="@+id/addressMakePaperInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address_create_information"
+            android:textColor="#aaaaaa"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/addr_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/addressMakePaperInformation"
+            android:text="写纸条的地点"
+            android:textColor="#aaaaaa"
+            android:textSize="12sp" />
+
+        <!-- 发布纸条的地址 -->
+
+        <TextView
+            android:id="@+id/addressPublishInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressMakePaperInformation"
+            android:text="@string/address_exist_information"
+            android:textColor="#aaaaaa"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/addr_exist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressMakePaperInformation"
+            android:layout_toRightOf="@id/addressPublishInformation"
+            android:text="发布的地点"
+            android:textColor="#aaaaaa"
+            android:textSize="12sp" />
+
+        <!-- 纸条内容 -->
+
+        <TextView
+            android:id="@+id/informationInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressPublishInformation"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/information_information"
+            android:textColor="#7a7a7a"
+            android:textSize="16sp" />
+        
+        <RelativeLayout 
+            android:id="@+id/audio_tool_layout"
+            android:layout_width="79dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:layout_below="@+id/informationInformation"
+            android:background="@drawable/icon_button_sound_nor_information"
+            android:visibility="gone">
+            
+            <TextView
+	            android:id="@+id/voiceTimeInformation"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:paddingBottom="2dp"
+	            android:layout_marginLeft="8dp"
+	            android:text=""
+	            android:textColor="#555555"
+	            android:textSize="12sp" />
+            
+            <ImageButton 
+                android:id="@+id/soundInformation"
+                android:layout_width="match_parent"
+            	android:layout_height="match_parent"
+            	android:background="@null"/>
+            
+        </RelativeLayout>
+
+        <!-- 纸条发布时间 -->
+
+        <TextView
+            android:id="@+id/timeInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/informationInformation"
+            android:layout_below="@+id/informationInformation"
+            android:layout_marginTop="16dp"
+            android:text="@string/time_information"
+            android:textColor="#aaaaaa"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <!-- 纸条底部Layout 1 : 评论收起状态 -->
+
+    <RelativeLayout
+        android:id="@+id/message_layout_bottom_without_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/message_layout_bottom_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/icon_message_bottom_left_publish" />
+
+        <ImageView
+            android:id="@+id/message_layout_bottom_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/icon_message_bottom_right_publish" />
+
+        <ImageView
+            android:id="@+id/message_layout_bottom_mid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/message_layout_bottom_right"
+            android:layout_toRightOf="@id/message_layout_bottom_left"
+            android:background="@drawable/icon_message_bottom_mid_publish" />
+    </RelativeLayout>
+
+    <!-- 纸条底部Layout 2 : 评论展开状态 -->
+
+    <RelativeLayout
+        android:id="@+id/message_layout_bottom_with_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+      	android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/message_comment_connector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/connector_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/detailmessage_connector_left" />
+
+            <ImageView
+                android:id="@+id/connector_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/detailmessage_connector_right" />
+
+            <ImageView
+                android:id="@+id/connector_mid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/connector_right"
+                android:layout_toRightOf="@id/connector_left"
+                android:background="@drawable/detailmessage_connector_mid" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message_comment_connector"
+            android:background="@drawable/icon_background_mid_information" >
+
+            <!-- 写评论按钮 -->
+
+            <ImageButton
+                android:id="@+id/buttonWriteDiscussInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/icon_button_write_discuss_nor_information" />
+
+            <!-- 评论色带 -->
+
+            <ImageView
+                android:id="@+id/colorDiscussInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonWriteDiscussInformation"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_color_bule_discuss_information" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

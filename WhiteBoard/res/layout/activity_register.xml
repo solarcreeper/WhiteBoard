@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background" >
+ <!-- **************背景************* -->
+
+
+    <!-- TitleBar -->
+
+    <RelativeLayout
+        android:id="@+id/backgroundRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_title_background" >
+
+        <TextView
+            android:id="@+id/registerRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_changepassword_register"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/backRegister"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/style_title_button_back" />
+
+        <ImageButton
+            android:id="@+id/ignorRegisterFirstUse"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/style_title_button_skip" />
+    </RelativeLayout>
+
+    <!-- 列表 -->
+
+    <LinearLayout
+        android:id="@+id/allcontentRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp" >
+
+        <EditText
+            android:id="@+id/firstbuttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_button_texbox_first_act"
+            android:ellipsize="end"
+            android:hint="@string/phone_or_email_register"
+            android:paddingLeft="16dp"
+            android:singleLine="true"
+            android:textColorHighlight="#0099cc"
+            android:textColorHint="#aaaaaa"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_line_cutoff" />
+
+        <EditText
+            android:id="@+id/secondbuttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_button_texbox_second_act"
+            android:ellipsize="end"
+            android:hint="@string/user_name_register"
+            android:paddingLeft="16dp"
+            android:singleLine="true"
+            android:textColorHighlight="#0099cc"
+            android:textColorHint="#aaaaaa"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_line_cutoff" />
+
+        <EditText
+            android:id="@+id/thirdbuttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_button_texbox_second_act"
+            android:ellipsize="end"
+            android:hint="@string/password_register"
+            android:paddingLeft="16dp"
+            android:password="true"
+            android:singleLine="true"
+            android:textColorHighlight="#0099cc"
+            android:textColorHint="#aaaaaa"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_line_cutoff" />
+
+        <EditText
+            android:id="@+id/fourthbuttonRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_button_texbox_third_act"
+            android:ellipsize="end"
+            android:hint="@string/confirm_password_register"
+            android:paddingLeft="16dp"
+            android:password="true"
+            android:singleLine="true"
+            android:textColorHighlight="#0099cc"
+            android:textColorHint="#aaaaaa"
+            android:textSize="16dp" />
+
+        <RelativeLayout
+            android:id="@+id/registerboxRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="81dp" >
+
+            <ImageButton
+                android:id="@+id/registerbuttonRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_button_blue" />
+            
+            <RelativeLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true">
+	            
+                <ProgressBar
+		            android:id="@+id/indicator"
+		            style="?android:attr/progressBarStyleSmall"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:visibility="gone"/>
+
+	            <TextView
+	                android:id="@+id/registercontentRegister"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerInParent="true"
+	                android:layout_toRightOf="@id/indicator"
+	                android:text="@string/button_register_register"
+	                android:textColor="#ffffff"
+	                android:textSize="18sp" />
+            
+            </RelativeLayout>
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/textlinkRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical" >
+
+            <ImageButton
+                android:id="@+id/nextRegister"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_navigation_next_item" />
+
+            <TextView
+                android:id="@+id/linktextRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/nextRegister"
+                android:text="@string/link_text_register"
+                android:textColor="#444444"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/icon_background_newcomer" >
+     <ImageView
+        android:id="@+id/backgroundTopNewcomer4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/icon_background_top_newcomer" />
+    <ImageView
+        android:id="@+id/backgroundBottomNewcomer4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/icon_background_top_newcomer" />
+    <RelativeLayout 
+        android:id="@+id/relativeLayout2Newcomer4"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" 
+           android:paddingLeft="20dp"
+           android:paddingRight="20dp"
+           android:paddingTop="20dp"
+           android:paddingBottom="20dp"
+           android:layout_above="@id/backgroundBottomNewcomer4"
+           android:layout_below="@id/backgroundTopNewcomer4"
+           android:orientation="vertical">
+            <ImageView 
+               android:id="@+id/mapNewcomer4"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:layout_centerInParent="true"
+               android:background="@drawable/icon_map3_newcomer"/>
+
+            <ImageView
+                android:id="@+id/wordschoiceNewcomer4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_words_25_newcomer" />
+
+             <ImageView 
+                android:id="@+id/wordspublishNewcomer4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_words_3_newcomer"/>
+           </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background" >
+
+    <!-- TitleBar -->
+
+    <RelativeLayout
+        android:id="@+id/backgroundMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_title_background" >
+
+        <!-- 返回 -->
+
+        <ImageButton
+            android:id="@+id/PositionBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/style_title_button_back" 
+            android:background="@null"/>
+        
+        <!-- 创建 -->
+        <ProgressBar 
+            android:id="@+id/indicator"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/PositionPut"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_post"
+            android:background="@null"
+            android:visibility="visible" />
+        
+        <!-- 标题 -->
+
+        <TextView
+            android:id="@+id/PositionMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/title_map_map"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/addboxAndMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/backgroundMap" >
+
+        <com.baidu.mapapi.map.MapView 
+            android:id="@+id/mymap2"
+			android:layout_width="match_parent" 
+			android:layout_height="match_parent" 
+			android:clickable="true" />
+        
+        <ImageButton
+            android:id="@+id/buttonLocateMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@null"
+            android:src="@drawable/style_button_map_locate" />
+    </RelativeLayout>
+
+</RelativeLayout>

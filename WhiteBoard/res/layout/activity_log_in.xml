@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_of_login_background" >
+
+    <!-- TitleBar -->
+
+    <RelativeLayout
+        android:id="@+id/backgroundLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_title_background" >
+
+        <TextView
+            android:id="@+id/loginLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_login_login"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/backLogIn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/style_title_button_back"
+            android:background="@null" />
+    </RelativeLayout>
+
+    <!-- Main Content -->
+
+    <LinearLayout
+        android:id="@+id/allcontentLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backgroundLogIn"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <!-- Avatar -->
+        
+        <RelativeLayout 
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/avatar_background"
+            android:padding="8dp">
+
+	        <ImageView
+	            android:id="@+id/usertileLogIn"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_centerInParent="true"
+	            android:scaleType="fitCenter"
+	            android:src="@drawable/default_avatar" />
+        
+        </RelativeLayout>
+
+        <!-- 用户名 -->
+
+        <EditText
+            android:id="@+id/firstbuttonLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42.5dp"
+            android:background="@drawable/icon_button_texbox_first_act"
+            android:ellipsize="end"
+            android:hint="@string/user_name_login"
+            android:paddingLeft="16dp"
+            android:singleLine="true"
+            android:textColorHighlight="#0099cc"
+            android:textColorHint="#aaaaaa"
+            android:textSize="16dp" />
+        <!-- 分割线 -->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_line_cutoff" />
+
+        <!-- 密码 -->
+
+        <EditText
+            android:id="@+id/secondbuttonLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_button_texbox_third_act"
+            android:ellipsize="end"
+            android:hint="@string/password_login"
+            android:paddingLeft="16dp"
+            android:password="true"
+            android:singleLine="true"
+            android:textColorHighlight="#0099cc"
+            android:textColorHint="#aaaaaa"
+            android:textSize="16dp" />
+
+        <!-- 登录按钮 -->
+
+        <RelativeLayout
+            android:id="@+id/loginboxLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp" >
+
+            <ImageButton
+                android:id="@+id/loginbuttonLogIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/style_button_blue" />
+            
+            <RelativeLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true">
+	            
+                <ProgressBar
+		            android:id="@+id/indicator"
+		            style="?android:attr/progressBarStyleSmall"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:visibility="gone"/>
+
+	            <TextView
+	                android:id="@+id/logincontentLogIn"
+	                android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:layout_toRightOf="@id/indicator"
+		            android:gravity="center"
+	                android:text="@string/button_login_login"
+	                android:textColor="#ffffff"
+	            	android:textSize="18sp" />	            
+	            
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- 文字链接 -->
+
+        <RelativeLayout
+            android:id="@+id/textlinkLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <ImageButton
+                android:id="@+id/nextLogIn"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_navigation_next_item" />
+
+            <TextView
+                android:id="@+id/linktextLogIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/nextLogIn"
+                android:text="@string/link_text_login"
+                android:textColor="#444444"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

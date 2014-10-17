@@ -1,0 +1,593 @@
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background" >
+    
+		<!-- 导航菜单 -->
+        <RelativeLayout
+	        android:id="@+id/relativeLayout2Infolist"
+	        android:layout_width="match_parent"
+	        android:layout_height="48dp"
+	        android:background="@drawable/icon_title_background" >
+	        
+			<!-- 标题信息列表 -->
+	        <TextView
+	            android:id="@+id/titleInfolist"
+	            android:layout_width="fill_parent"
+	            android:layout_height="match_parent"
+	            android:layout_centerInParent="true"
+	            android:gravity="center"
+	            android:text="纸条列表"
+	            android:textSize="20sp"
+	            android:textColor="#ffffff" />
+	        
+	        <!-- 返回按钮 -->
+	        <ImageButton
+	            android:id="@+id/backInfolist"
+	            android:layout_width="48dp"
+	            android:layout_height="48dp"
+	            android:layout_centerVertical="true"
+	            android:background="@null"
+	            android:src="@drawable/style_title_button_back" />
+	        
+			<!-- 下一步按钮 -->
+	        <ImageButton
+	            android:id="@+id/advanceInfolist"
+	            android:layout_width="48dp"
+	            android:layout_height="48dp"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:background="@null"
+	            android:src="@drawable/style_title_button_function" />
+	        
+	    </RelativeLayout>
+	    
+        <!-- RMList -->
+        <ListView
+            android:id="@+id/list_view_rm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayout2Infolist"
+            android:divider="@null"/>
+	    
+        <!-- Option Panel -->
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relativeLayout2Infolist" >
+	        
+            <ImageButton 
+                android:id="@+id/option_panel_background_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rm_list_layout_option"
+                android:background="@null"
+                android:visibility="gone"/>
+	        
+            <!-- 分类列表 -->
+            <LinearLayout
+                android:id="@+id/rm_list_layout_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rm_list_layout_option" 
+                android:layout_marginTop="-5dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+                
+                <!-- 1 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/rm_list_button_option_type_commercial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rm_list_option_list" />
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/category_label1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/imageView1"
+                        android:text="商业信息"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                    
+                    <ImageView 
+                        android:id="@+id/rm_list_checked_type_commercial"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/navigation_accept"/>
+                    
+                </RelativeLayout>
+                
+                <!-- 2 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/rm_list_button_option_type_personal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rm_list_option_list" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/category_label2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/imageView2"
+                        android:text="个人状态"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                    
+                    <ImageView 
+                        android:id="@+id/rm_list_checked_type_personal"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/navigation_accept"/>
+                    
+                </RelativeLayout>
+                
+                <!-- 3 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/rm_list_button_option_type_friend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rm_list_option_list" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/category_label3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/imageView3"
+                        android:text="交友信息"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                    
+                    <ImageView 
+                        android:id="@+id/rm_list_checked_type_friend"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/navigation_accept"/>
+                    
+                </RelativeLayout>
+                
+                <!-- 4 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/rm_list_button_option_type_help"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rm_list_option_list_last" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/category_label4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/imageView4"
+                        android:text="互助信息"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                    
+                    <ImageView 
+                        android:id="@+id/rm_list_checked_type_help"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/navigation_accept"/>
+                    
+                </RelativeLayout>
+                
+            </LinearLayout>
+            
+            <!-- 筛选列表 -->
+            <LinearLayout
+                android:id="@+id/rm_list_layout_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rm_list_layout_option" 
+                android:layout_marginTop="-5dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+                
+                <!-- hasPicture -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/rm_list_button_option_filter_picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rm_list_option_list" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/has_picture" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/imageView5"
+                        android:text="有图片"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                    
+                    <ImageView 
+                        android:id="@+id/rm_list_checked_filter_picture"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/navigation_accept"/>
+                    
+                </RelativeLayout>
+                
+                <!-- hasVoice -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/rm_list_button_option_filter_voice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rm_list_option_list_last" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/has_voice" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/imageView6"
+                        android:text="有声音"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                    
+                    <ImageView 
+                        android:id="@+id/rm_list_checked_filter_voice"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/navigation_accept"/>
+                    
+                </RelativeLayout>
+                
+            </LinearLayout>
+            
+            <!-- 排序列表 -->
+            <LinearLayout
+                android:id="@+id/rm_list_layout_sort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rm_list_layout_option" 
+                android:layout_marginTop="-5dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+                
+                <!-- distance -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/rm_list_button_option_sort_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rm_list_option_list" />
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/category_label1" 
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/imageView7"
+                        android:text="按距离"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                    
+                    <ImageView 
+                        android:id="@+id/rm_list_checked_sort_distance"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/navigation_accept"/>
+                    
+                </RelativeLayout>
+                
+                <!-- time -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/rm_list_button_option_sort_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rm_list_option_list" />
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/category_label2" 
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/imageView8"
+                        android:text="按时间"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                    
+                    <ImageView 
+                        android:id="@+id/rm_list_checked_sort_time"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/navigation_accept"/>
+                    
+                </RelativeLayout>
+                
+                <!-- heat -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/rm_list_button_option_sort_heat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rm_list_option_list_last" />
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/category_label4"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/imageView9"
+                        android:text="按人气"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                    
+                    <ImageView 
+                        android:id="@+id/rm_list_checked_sort_heat"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/navigation_accept"/>
+                    
+                </RelativeLayout>
+                
+            </LinearLayout>
+	        
+            <!-- Tool Bar -->
+            <LinearLayout
+                android:id="@id/rm_list_layout_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+                
+                <!-- 左按钮：Type -->
+                <RelativeLayout 
+                    android:id="@+id/rm_list_layout_option_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+                    
+                    <ImageButton
+                        android:id="@+id/rm_list_button_option_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rm_list_option_left"/>
+                    
+                    <RelativeLayout 
+            	        android:layout_width="wrap_content"
+            	        android:layout_height="wrap_content"
+            	        android:layout_centerInParent="true" >
+            	        
+	                    <TextView
+	                        android:id="@+id/rm_list_label_option_type"
+	                        android:layout_height="wrap_content"
+	                        android:layout_width="wrap_content"
+	                        android:layout_centerVertical="true"
+	                        android:layout_marginLeft="10dp"
+	                        android:textSize="18sp"
+	                        android:textColor="#333333"
+	                        android:text="分类"/>
+	                    
+	                    <ImageView
+	                        android:id="@+id/rm_list_indicator_option_type"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_centerVertical="true"
+	                        android:layout_toRightOf="@id/rm_list_label_option_type" 
+	                        android:layout_marginLeft="8dp"
+	                        android:background="@drawable/icon_navigation_menu"/>
+	                    
+	                </RelativeLayout>
+                    
+                </RelativeLayout>
+                
+            	<!-- 中按钮：Filter -->
+            	<RelativeLayout 
+                    android:id="@+id/rm_list_layout_option_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"  >
+                    
+                    <ImageButton
+                        android:id="@+id/rm_list_button_option_filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rm_list_option_middle" />
+                    
+                    <RelativeLayout 
+            	        android:layout_width="wrap_content"
+            	        android:layout_height="wrap_content"
+            	        android:layout_centerInParent="true" >
+            	        
+	                    <TextView
+	                        android:id="@+id/rm_list_label_option_filter"
+	                        android:layout_height="wrap_content"
+	                        android:layout_width="wrap_content"
+	                        android:layout_centerVertical="true"
+	                        android:layout_marginLeft="10dp"
+	                        android:textSize="18sp"
+	                        android:textColor="#333333"
+	                        android:text="筛选"/>
+	                    
+	                    <ImageView
+	                        android:id="@+id/rm_list_indicator_option_filter"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_centerVertical="true"
+	                        android:layout_toRightOf="@id/rm_list_label_option_filter" 
+	                        android:layout_marginLeft="8dp"
+	                        android:background="@drawable/icon_navigation_menu"/>
+	                    
+	                </RelativeLayout>
+                    
+                </RelativeLayout>
+                
+                <!-- 右按钮：Sort -->
+                <RelativeLayout 
+                    android:id="@+id/rm_list_layout_option_sort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+                    
+                    <ImageButton
+                        android:id="@+id/rm_list_button_option_sort"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rm_list_option_right" />
+                    
+                    <RelativeLayout 
+            	        android:layout_width="wrap_content"
+            	        android:layout_height="wrap_content"
+            	        android:layout_centerInParent="true" >
+            	        
+	                    <TextView
+	                        android:id="@+id/rm_list_label_option_sort"
+	                        android:layout_height="wrap_content"
+	                        android:layout_width="wrap_content"
+	                        android:layout_centerVertical="true"
+	                        android:layout_marginLeft="10dp"
+	                        android:textSize="18sp"
+	                        android:textColor="#333333"
+	                        android:text="排序"/>
+	                    
+	                    <ImageView
+	                        android:id="@+id/rm_list_indicator_option_sort"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_centerVertical="true"
+	                        android:layout_toRightOf="@id/rm_list_label_option_sort" 
+	                        android:layout_marginLeft="8dp"
+	                        android:background="@drawable/icon_navigation_menu"/>
+	                    
+	                </RelativeLayout>
+                    
+                </RelativeLayout>
+                
+            </LinearLayout>
+            
+        </RelativeLayout>
+
+</RelativeLayout>

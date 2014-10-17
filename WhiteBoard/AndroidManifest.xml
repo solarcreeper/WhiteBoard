@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.WhiteBoard.WhiteBoard"
+    android:versionCode="2600"
+    android:versionName="0.1.16" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="17" />
+    
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>  
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission> 
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	
+    <supports-screens 
+	    android:largeScreens="true"
+    	android:normalScreens="true" 
+    	android:smallScreens="true"
+    	android:resizeable="true" 
+    	android:anyDensity="true"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+        android:name="com.WhiteBoard.WhiteBoard.WhiteBoardApp"
+        android:hardwareAccelerated="true">
+        
+        <service 
+            android:name="com.baidu.location.f" 
+            android:enabled="true"
+			android:process=":remote">
+		</service>
+		
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.SplashScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.WelcomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.MyMapActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.Publish2Activity"
+            android:launchMode="singleTask" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.ChangePasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.LogInActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.RegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.PositionActivity" 
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.DetailMessageActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.RMListActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.ProfileActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.FollowActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.SetActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.PublishActivity" 
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.AboutActivity" 
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.WhiteBoard.WhiteBoard.HelpActivity" 
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+</manifest>
